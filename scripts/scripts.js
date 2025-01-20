@@ -1,16 +1,27 @@
 // Mostrar el año actual
 const currentYear = new Date().getFullYear();
-document.getElementById("theyear").textContent = currentYear;
+const yearElement = document.getElementById("theyear");
+if (yearElement) {
+    yearElement.textContent = currentYear;
+}
 
 // Mostrar la última fecha de modificación
-document.getElementById("lastu").textContent = "Last Updated: " + document.lastModified;
+const lastModifiedElement = document.getElementById("lastu");
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = "Last Updated: " + document.lastModified;
+}
 
 // Cambiar la imagen al cargar un archivo
 const image = document.querySelector("img");
-const input = document.querySelector("input");
+const input = document.querySelector("input[type='file']");
 
-input.addEventListener("change", () => {
-    if (input.files[0]) {
-        image.src = URL.createObjectURL(input.files[0]);
-    }
-});
+if (input) {
+    input.addEventListener("change", () => {
+        const file = input.files[0];
+        if (file && file.type.startsWith("image/")) {
+            image.src = URL.createObjectURL(file);
+        } else {
+            alert("Por favor, seleccione un archivo de imagen.");
+        }
+    });
+}

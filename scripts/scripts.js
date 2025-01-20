@@ -14,14 +14,3 @@ input.addEventListener("change", () => {
         image.src = URL.createObjectURL(input.files[0]);
     }
 });
-
-
-    // Mostrar/ocultar el menú de navegación en modo móvil
-    const hamButton = document.querySelector('#menu');
-    const navigation = document.querySelector('.navigation');
-
-    hamButton.addEventListener('click', () => {
-        navigation.classList.toggle('show');
-        hamButton.classList.toggle('show');
-    });
-

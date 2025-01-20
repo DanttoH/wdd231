@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: #E5E5E5;
+    font-family: 'Roboto';
+}
+
+/* Estilo para los botones WDD */
+.coursebutton1 {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando un botón WDD está seleccionado */
+.coursebutton1.selected {
+    background-color: #14213D;
+    color: white;
+}
+
+/* Estilo para los botones CSE */
+.coursebutton2 {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando un botón CSE está seleccionado */
+.coursebutton2.selected {
+    background-color: #14213D;
+    color: white;
+}
+
+/* Estilos para los botones principales */
+.principalbuttons {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.principalbuttons:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.principalbuttons:hover {
+    background-color: black;
+    color: white;
+}
+
+.wraper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.wraper * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    background-color: #14213D;
+    color: #E5E5E5;
+}
+
+.aside1 p {
+    display: table-cell;
+    vertical-align: bottom;
+    color: #000;
+}
+
+.aside img {
+    width: 200px;
+    height: auto;
+}
+
+header {
+    background: #14213D;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.profile {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #dfdfdf;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #14213D;
+    height: 80px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    text-align: center;
+    background-color: #FCA311;
+    height: 100%;
+    font-size: 24px;
+    width: 200px;
+}
+
+.aside1,
+.aside2 {
+    background: #FCA311;
+}
+
+
+
+nav a:hover {
+    border: 1px solid #FFF;
+}
+
+.active {
+    color: yellow;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 800px) {
+    .main {
+        flex: 3;
+    }
+
+    .aside1 {
+        order: 1;
+    }
+
+    .aside2 {
+        order: 2;
+    }
+
+    .main {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+
+}
+
+@media (min-width: 600px) {
+    .aside {
+        flex: 1;
+    }
+}
+
+
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border: 0;
+    background: #f0f0f0;
+    color: #000;
+
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.nav {
+    background-color: #14213D;
+    color: #FFFFFF;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+    background-color: #14213D;
+    color: #FFFFFF;
+
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: .075rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clam(1rem, 2vmin, 1.5rem);
+    background-color: #14213D
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: #FCA311;
+    color: #dfdfdf;
+    font-weight: 700;
+}
+
+.show li {
+    display: block;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "📍";
+    /* just a wayfinding symbol for the user */
+}
+
+@media (min-width: 40em) {
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+}

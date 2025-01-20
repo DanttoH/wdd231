@@ -7,93 +7,89 @@
     <meta name="description" content="Dantto Heromsilla's BYU-Idaho WDD 230 course home page">
     <meta name="author" content="Dantto Hermosilla">
     <title>WDD231 FRONTEND DEVELOPMENT I</title>
-    <<link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+
 </head>
 
 <body>
-    <Header>
+
+    <header class="header">
         <h1>Dantto Elias Hermosilla Orellana</h1>
-        <img src="images/profile.JPG" alt="Profile" width="200">
+        <img class="profile" src="images/profile.JPG" alt="Profile">
     </header>
-    <nav>
-        <ul class="navigation">
-            <li><a href="#" class="active"> Home</a></li>
-            <li><a href="#" title="About Us" class="active">About Us</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="https://github.com/DanttoH/wdd231">Github Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/dantto-el%C3%ADas-hermosilla-orellana-6a0327193/"
-                    target="_blank">Linkedin</a></li>
-            <li><a href="#" title="About Us" class="active">About Us</a></li>
 
-    </nav>
+    <div class="wraper">
 
-
-    <button id="menu"></button>
-
-
+        <button id="menu"></button>
+        <nav>
+            </button>
+            <ul class="navigation">
+                <li><a href="#" class="active"> Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/DanttoH/wdd231" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/dantto-el%C3%ADas-hermosilla-orellana-6a0327193/"
+                        target="_blank">Linkedin</a></li>
+            </ul>
+        </nav>
 
 
-    <h2>About Us</h2>
-    <div class="stuff"></div>
-    </Nav>
-    <h2>About Us</h2>
-    <div class="stuff"></div>
-    <main>
-        <div class="coursework">
-            <section>
-                <h2>Course Work</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </section>
-        </div>
-        <div class="country">
-            <section>
-                <h2>Mendoza, Argentina</h2>
-                <img src="images/Mendoza.jpg" alt="Mendoza, Argentina" width="200">
-            </section>
-        </div>
-        <div class="certificate">
-            <section>
-                <h2>Web and Computer Programming Certificate</h2>
+        <article class="main">
+            <h2>Web and Computer Programming Certificate</h2>
 
-                <button class="principalButtons" id="allButton">ALL</button>
-                <button class="principalButtons" id="wddButton">WDD</button>
-                <button class="principalButtons" id="cseButton">CSE</button>
-        </div>
-
-
-        <div id="buttonsContainer1">
-            <button class="courseButton1">WDD 130</button>
-            <button class="courseButton1">WDD 131</button>
-            <button class="courseButton1">WDD 231</button>
-        </div>
-
-        <div id="buttonsContainer2">
-            <button class="courseButton2">CSE 110</button>
-            <button class="courseButton2">CSE 210</button>
-            <button class="courseButton2">CSE 111</button>
-        </div>
-        </div>
-        </section>
-        </div>
+            <button class="principalbuttons" id="allbutton">ALL</button>
+            <button class="principalbuttons" id="wddbutton">WDD</button>
+            <button class="principalbuttons" id="csebutton">CSE</button>
 
 
 
+            <div id="buttonscontainer1">
+                <button class="coursebutton1">WDD 130</button>
+                <button class="coursebutton1">WDD 131</button>
+                <button class="coursebutton1">WDD 231</button>
+            </div>
 
-    </main>
-    <footer>
-        <p> &copy; <span id="theyear"></span> 💪🏻Dantto Hermosilla Mendoza✌🏻 , Argentina</p>
-        <p id="lastModified"> &bull; <span id="lastu"></span></p>
+            <!-- Contenedor de botones CSE -->
+            <div id="buttonscontainer2">
+                <button class="coursebutton2">CSE 110</button>
+                <button class="coursebutton2">CSE 210</button>
+                <button class="coursebutton2">CSE 111</button>
+            </div>
 
 
-    </footer>
+        </article>
+        <aside class="aside aside1">
+            <div class="country">
+                <section>
+                    <h2>Mendoza</h2>
+                    <img src="images/Mendoza.jpg" alt="Mendoza, Argentina" width="200">
+
+                    <p>Mendoza its located at the west of the andes mountains in Argentina who is the borther between
+                        Argentina and Chile, bordering on the south with Neuquen and north with San Juan, i would like
+                        to say that mendoza it look like utah but with a different weather, whe don't have snow in the
+                        city however in the mountains you always will find snow in the hills.</p>
+                </section>
+        </aside>
+        <aside class="aside aside2">
+            <div class="coursework">
+                <section>
+                    <h2>Course Work</h2>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </section>
+        </aside>
+        <footer class="footer">
+            <p> &copy; <span id="theyear"></span> 💪🏻Dantto Hermosilla Mendoza✌🏻 , Argentina</p>
+            <p id="lastModified"> &bull; <span id="lastu"></span></p>
+        </footer>
+    </div>
+
 
     <script src="scripts/scripts.js"></script>
-
-
-
+    <script src="scripts/buttons.js"></script>
+    <script src="scripts/hamburger.js"></script>
 </body>
 
 </html>

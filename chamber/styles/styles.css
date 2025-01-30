@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*class selector for nav and header */
+.hero h1 {
+    margin: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid rgba(104, 101, 101, 0.76);
+    padding: 1rem;
+    background-color: #0F2D49;
+    color: var(--white);
+    width: 100%;
+    height: auto;
+    color: #FFFFFF;
+
+    position: inherit;
+}
+
+.logo {
+    cursor: pointer;
+    height: 200px;
+}
+
+
+
+a {
+    color: var(--white);
+}
+
+nav a {
+    padding: 5px;
+    text-decoration: none;
+    margin: auto;
+
+}
+
+.hero {
+    position: relative;
+    height: auto;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 1000px;
+}
+
+header {
+    font-family: "Racing Sans One";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/*end for this class*/
+
+main {
+    margin: 0 auto;
+    padding: 0.5rem;
+    max-width: 700px;
+    background-color: #fff;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.menu {
+    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.8rem;
+    background-color: #798A99;
+    text-align: center;
+}
+
+.menu button {
+    padding: 1rem;
+    font-weight: 700;
+}
+
+section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #798A99;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.grid section {
+    text-align: center;
+}
+
+.grid img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #333;
+}
+
+.grid section>* {
+    margin: 0.1rem;
+}
+
+.grid h3 {
+    font-family: "Caveat", cursive;
+}
+
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.list section>* {
+    margin: 0 1rem;
+}
+
+.list section img {
+    display: none;
+    /* smaller viewports only */
+}
+
+.list section h3 {
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+    background-color: #798A99;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+section p {
+    font-weight: 600;
+    font-size: smaller;
+    color: #fff;
+}
+
+section a {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: navy;
+    letter-spacing: 1.1pt;
+}
+
+img {
+    height: 75px;
+    max-width: 100%;
+    /* Images are jerks - Seattle*/
+}
+
+/******* */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: #CCBF90;
+    font-family: 'Roboto';
+}
+
+
+
+.wraper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.wraper * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    background-color: #14213D;
+    color: #E5E5E5;
+}
+
+.aside1 p {
+    display: table-cell;
+    vertical-align: bottom;
+    color: #000;
+}
+
+.aside img {
+    width: 200px;
+    height: auto;
+}
+
+header {
+    background: #CCBF90;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.profile {
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    object-fit: cover;
+    background-color: #dfdfdf;
+    margin-left: 10px;
+
+}
+
+footer {
+    background-color: #0F2D49;
+    height: 200px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+nav a:hover {
+    border: 1px solid #FFF;
+}
+
+.active {
+    color: yellow;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 800px) {
+    .main {
+        flex: 3;
+    }
+
+    .aside1 {
+        order: 1;
+    }
+
+    .aside2 {
+        order: 2;
+    }
+
+    .main {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+
+}
+
+@media (min-width: 600px) {
+    .aside {
+        flex: 1;
+    }
+}
+
+
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border: 0;
+    background: #f0f0f0;
+    color: #000;
+
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.nav {
+    background-color: #0F2D49;
+    color: #FFFFFF;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+    background-color: #0F2D49;
+    color: #FFFFFF;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: .075rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    background-color: #0F2D49
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: #CCBF90;
+    color: #dfdfdf;
+    font-weight: 700;
+}
+
+.show li {
+    display: block;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "📍";
+    /* just a wayfinding symbol for the user */
+}
+
+@media (min-width: 40em) {
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+}
+
+.footer1 {
+    display: block;
+
+}

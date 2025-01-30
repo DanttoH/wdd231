@@ -1,0 +1,18 @@
+[
+    {
+        "name": "ABC Plumbing",
+        "address": "123 Water St, City, ST",
+        "phone": "555-1234",
+        "website": "https://abcplumbing.com",
+        "image": "abc-plumbing.jpg",
+        "membership": 3
+    },
+    {
+        "name": "City Coffee",
+        "address": "456 Java Ave, City, ST",
+        "phone": "555-5678",
+        "website": "https://citycoffee.com",
+        "image": "city-coffee.jpg",
+        "membership": 2
+    }
+]

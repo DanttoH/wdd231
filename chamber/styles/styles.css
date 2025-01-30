@@ -108,7 +108,7 @@ section {
     margin: 0.1rem;
 }
 
-.grid h3 {
+.grid h3 h2 h5 h5 h6 {
     font-family: "Caveat", cursive;
 }
 
@@ -191,7 +191,7 @@ body {
     border-radius: 10px;
 }
 
-h2 {
+h2 h3 h4 h5 h6 {
     background-color: #14213D;
     color: #E5E5E5;
 }

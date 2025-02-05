@@ -2,22 +2,21 @@ const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("article");
 
-// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
-
-gridbutton.addEventListener("click", () => {
-    // example using arrow function
+// Asegura que hay una clase por defecto
+document.addEventListener("DOMContentLoaded", () => {
     display.classList.add("grid");
-    display.classList.remove("list");
 });
 
-listbutton.addEventListener("click", showList); // example using defined function
+gridbutton.addEventListener("click", () => {
+    display.classList.add("grid");
+    display.classList.remove("list");
+    gridbutton.classList.add("active");
+    listbutton.classList.remove("active");
+});
 
-function showList() {
+listbutton.addEventListener("click", () => {
     display.classList.add("list");
     display.classList.remove("grid");
-}
-
-
-
-
-
+    listbutton.classList.add("active");
+    gridbutton.classList.remove("active");
+});

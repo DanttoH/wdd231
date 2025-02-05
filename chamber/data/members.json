@@ -1,18 +1,71 @@
 [
     {
-        "name": "ABC Plumbing",
-        "address": "123 Water St, City, ST",
-        "phone": "555-1234",
-        "website": "https://abcplumbing.com",
-        "image": "abc-plumbing.jpg",
-        "membership": 3
+        "name": "Thermal waters & Hotel spa",
+        "address": "RUTA PROV. Nº82 KM 38 CACHEUTA MENDOZA – ARGENTINA",
+        "phone": "+54 261 5191676",
+        "website": "https://termascacheuta.com",
+        "image": "images/termas.webp",
+        "image1": "images/termas1.jpg",
+        "membership": 2
     },
     {
-        "name": "City Coffee",
-        "address": "456 Java Ave, City, ST",
-        "phone": "555-5678",
-        "website": "https://citycoffee.com",
-        "image": "city-coffee.jpg",
-        "membership": 2
+        "name": "City bus Mendoza",
+        "address": "Espejo 189, Ciudad de Mendoza, Mendoza – CP 5500",
+        "phone": "0810-122-1122",
+        "website": "https://www.turismoandesmar.com/City-Bus-Ar",
+        "image": "images/andesmar.png",
+        "image1": "images/citybus.png",
+        "membership": 1,
+        "description": "Enjoy the land of sun and good wine on a unique tour of squares, green, cultural and shopping spacesfor the whole family"
+    },
+    {
+        "name": "Trivento vineyards",
+        "address": "Ruta 60 y Canal Pescara (5517), Maipú Mendoza, Argentina",
+        "phone": "+54 9 261 586 2868",
+        "website": "https://trivento.com/experiencias.php",
+        "image": "images/trivento.webp",
+        "image1": "images/trivento1.jpg",
+        "membership": 2,
+        "description": "Tours and tasting experiences Engaging tours designed for enthusiastic and curious visitors who enjoy outdoor experiences and gastronomy. turismo@trivento.com"
+    },
+    {
+        "name": "Villavicencio Natural Reserve",
+        "address": "Reserva Natural Villavicencio KM 50, RP52, Mendoza",
+        "phone": "+54 9 261 2177357",
+        "website": "https://www.villavicencio.com.ar/",
+        "image": "images/villavicencio.webp",
+        "image1": "images/villavicenciohotel.jpg",
+        "membership": 2,
+        "description": "The Reserve and our Mineral Water owes its name to Captain Joseph Villavicencio, who, attracted by the pure springs and natural beauty, settled in this prodigious place in 1680."
+    },
+    {
+        "name": "Climbing Aconcagua",
+        "address": "Juan B Justo 345 Mendoza, Argentina",
+        "phone": "Tel/fax:(+54 261) 4250871",
+        "website": "Tel/fax:(+54 261) 4250871",
+        "image": "images/inka.png",
+        "image1": "images/inka1.webp",
+        "membership": 3,
+        "description": " | SCHEDULED EXPEDITIONS Popular | PRIVATE EXPEDITIONS Exclusive | LOGISTICS SERVICES Best Offer inka@inka.com.ar"
+    },
+    {
+        "name": "Immigrant Museum",
+        "address": "RUTA PROV. Nº82 KM 38 CACHEUTA MENDOZA – ARGENTINA",
+        "phone": "+54 9 2625 660771",
+        "website": "https://mendoza.tur.ar/travel-directory/museo-del-inmigrante",
+        "image": "images/museo.png",
+        "image1": "images/museo1.webp",
+        "membership": 1,
+        "description": "The Immigrant Museum is located in the emblematic Western Railway station, in the picturesque Bowen district, in General Alvear. Mon to Su 8:00 – 12:00 pm 6:00pm – 8pm."
+    },
+    {
+        "name": "Argentina Rafting",
+        "address": "Amigorena 86 – Mendoza – Capital",
+        "phone": "Whatsapp: +54 9 (261) 657-2582 / 657-2583",
+        "website": "https://argentinarafting.com/?lang=en",
+        "image": "images/rafting.png",
+        "image1": "images/rafting1.jpg",
+        "membership": 3,
+        "description": "Adventure Park. Potrerillos – Luján de Cuyo – Mendoza Ruta Perilago S/N – CP 5549 Lat/Long: -32° 56′ 18.48″, -69° 12′ 27.91″ +54 02624 482037 info@argentinarafting.com"
     }
 ]

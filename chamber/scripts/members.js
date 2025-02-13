@@ -39,5 +39,31 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error al obtener los datos:", error));
 
+
+
+        fetch('members.json')
+    .then(response => response.json())
+    .then(data => {
+        const spotlights = data.filter(member => member.membership === 'gold' || member.membership === 'silver');
+        const randomSpotlights = spotlights.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+        const spotlightSection = document.getElementById('spotlights');
+        randomSpotlights.forEach(member => {
+            const memberDiv = document.createElement('div');
+            memberDiv.classList.add('spotlight');
+            memberDiv.innerHTML = `
+                <h3>${member.companyName}</h3>
+                <img src="${member.logo}" alt="${member.companyName}">
+                <p>Phone: ${member.phone}</p>
+                <p>Address: ${member.address}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p>Membership: ${member.membership}</p>
+            `;
+            spotlightSection.appendChild(memberDiv);
+        });
+    })
+    .catch(error => console.error('Error loading member data:', error));
+
+
 });
 

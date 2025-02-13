@@ -1,0 +1,505 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: #798A99;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    color: #FFF;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #14213D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Membership Cards Styling */
+.membership-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.membership-card {
+    background-color: #CCBF90;
+    border-radius: 8px;
+    padding: 20px;
+    width: 22%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.membership-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.membership-card button {
+    background-color: #0F2D49;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.membership-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #798A99;
+    padding: 20px;
+    border-radius: 8px;
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+
+.modal .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animation for Membership Cards */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card.animate {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Responsive Design for Small Screens (Mobile) */
+@media screen and (max-width: 768px) {
+    .membership-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membership-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .membership-card h3 {
+        font-size: 1.2em;
+    }
+
+    .membership-card button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    /* Adjust the form padding */
+    form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea,
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Adjust the header/footer text size */
+    header,
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design for Larger Screens (Desktop) */
+@media screen and (min-width: 1024px) {
+    .membership-cards {
+        justify-content: space-around;
+    }
+
+    .membership-card {
+        width: 22%;
+        margin-bottom: 30px;
+    }
+
+    .membership-card h3 {
+        font-size: 1.8em;
+    }
+
+    .membership-card button {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+
+    /* Increase form padding */
+    form {
+        padding: 25px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea,
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Adjust the header/footer text size */
+    header,
+    footer {
+        font-size: 18px;
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border: 0;
+    background: #f0f0f0;
+    color: #000;
+
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.nav {
+    background-color: #14213D;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+    background-color: #0F2D49;
+    color: #FFFFFF;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: .075rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    background-color: #0F2D49;
+    border-radius: 10px;
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: #CCBF90;
+    color: #dfdfdf;
+    font-weight: 700;
+}
+
+.show li {
+    display: block;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "📍";
+    /* just a wayfinding symbol for the user */
+}
+
+@media (min-width: 40em) {
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    .navigation a {
+        display: block;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+}
+
+/* Mobile Styles */
+body {
+    font-size: 16px;
+}
+
+#hero img {
+    width: 100%;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer {
+    background-color: #14213D;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background: #CCBF90;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.profile {
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    object-fit: cover;
+    background-color: #dfdfdf;
+    margin-left: 10px;
+
+}
+
+.thank-you-content h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.thank-you-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.thank-you-content ul {
+    list-style-type: none;
+    font-size: 1.1em;
+}
+
+.thank-you-content li {
+    margin: 10px 0;
+}
+
+.thank-you-content strong {
+    color: #007bff;
+}
+
+/* Text Fade-in Animation */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade In Animation for Main Content */
+@keyframes fadeInMain {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for Membership Cards */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/chamber/styles/join.css">
+
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <img class="profile" src="images/android-chrome-512x512.png" alt="Profile">
+
+
+    </header>
+    <button id="menu" aria-label="Open navigation menu"></button>
+
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="/chamber/directory.html" title="Scope Mendoza Directory">Directory</a>
+            </li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="/chamber/index.html" target="_blank">Home</a></li>
+            <li><a href="/chamber/join.html" target="_blank">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!DOCTYPE html>
+
+        <body>
+            <main>
+                <form id="registration-form" action="thankyou.html" method="get">
+                    <h2>Registration Form</h2>
+
+                    <div class="form-field">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first_name" required title="Applicant's First Name"
+                            autocomplete="given-name">
+                        <small class="error-message" id="first-name-error"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last_name" required title="Applicant's Last Name"
+                            autocomplete="family-name">
+                        <small class="error-message" id="last-name-error"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="org-title">Organizational Title:</label>
+                        <input type="text" id="org-title" name="org_title" required
+                            title="Applicant's Organizational Title" pattern="[A-Za-z\s\-]{7,}"
+                            autocomplete="organization-title">
+                        <small class="error-message" id="org-title-error"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required title="Applicant's Email"
+                            autocomplete="email" placeholder="example@example.com">
+                        <small class="error-message" id="email-error"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Mobile Phone:</label>
+                        <input type="tel" id="phone" name="phone" required title="Applicant's Mobile Phone"
+                            autocomplete="tel">
+                        <small class="error-message" id="phone-error"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="organization">Business/Organization Name:</label>
+                        <input type="text" id="organization" name="organization" required title="Organization Name"
+                            autocomplete="organization">
+                        <small class="error-message" id="organization-error"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="membership-level">Membership Level:</label>
+                        <select id="membership-level" name="membership_level" required title="Select Membership Level">
+                            <option value="NP Membership">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="Bronze Membership">Bronze Membership</option>
+                            <option value="Silver Membership">Silver Membership</option>
+                            <option value="Gold Membership">Gold Membership</option>
+                        </select>
+                        <small class="error-message" id="membership-level-error"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="description">Business/Organization Description:</label>
+                        <textarea id="description" name="description" title="Business Description"></textarea>
+                        <small class="error-message" id="description-error"></small>
+                    </div>
+
+                    <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                    <div class="form-field">
+                        <input type="submit" value="Submit">
+                    </div>
+
+</html>
+
+<!-- Membership Cards -->
+<div class="membership-cards">
+    <div class="membership-card" id="np-card">
+        <h3>NP Membership</h3>
+        <p>No Fee</p>
+        <button onclick="openModal('np-modal')">Learn More</button>
+    </div>
+    <div class="membership-card" id="bronze-card">
+        <h3>Bronze Membership</h3>
+        <p>Affordable Price</p>
+        <button onclick="openModal('bronze-modal')">Learn More</button>
+    </div>
+    <div class="membership-card" id="silver-card">
+        <h3>Silver Membership</h3>
+        <p>Great Benefits</p>
+        <button onclick="openModal('silver-modal')">Learn More</button>
+    </div>
+    <div class="membership-card" id="gold-card">
+        <h3>Gold Membership</h3>
+        <p>Premium Features</p>
+        <button onclick="openModal('gold-modal')">Learn More</button>
+    </div>
+</div>
+
+<!-- Modals for Membership Details -->
+<div id="np-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('np-modal')">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>Access to special non-profit benefits, networking, and resources.</p>
+    </div>
+</div>
+
+<div id="bronze-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('bronze-modal')">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>Access to basic benefits and discounted event tickets.</p>
+    </div>
+</div>
+
+<div id="silver-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('silver-modal')">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>Great advertising opportunities and exclusive events.</p>
+    </div>
+</div>
+
+<div id="gold-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>Premium features, including homepage spotlight and VIP access.</p>
+    </div>
+</div>
+
+
+</main>
+
+<footer class="footer">
+    <div class="footer2">
+        <p>Scope Mendoza Chamber of Commerce</p>
+        <p>B Infanta M26 C9, Las Heras, Mendoza</p>
+        <p>info@scopeM.org</p>
+        <p>(54) 9 2613342583</p>
+
+    </div>
+    <div class="footer1">
+        <p> &copy; <span id="theyear"></span> WDD231 Class Project
+        <p>Dantto Hermosilla</p>
+        <p>Scope Mendoza Chamber of Commerce</p>
+
+        <p id="lastModified"> &bull; <span id="lastu"></span></p>
+    </div>
+
+    <script src="/chamber/scripts/scripts.js"></script>
+    <script src="/chamber/scripts/join.js"></script>
+    <script src="/chamber/scripts/hamburger.js"></script>
+
+
+
+    </body>
+
+    </html>

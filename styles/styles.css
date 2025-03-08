@@ -70,10 +70,13 @@ body {
     border-radius: 10px;
 }
 
-h2 {
+h2,
+h1 {
     background-color: #14213D;
     color: #E5E5E5;
 }
+
+
 
 .aside1 p {
     display: table-cell;
@@ -88,6 +91,8 @@ h2 {
 
 header {
     background: #14213D;
+    font-family: 'Roboto';
+    font-weight: 700;
     color: #FFF;
     display: flex;
     align-items: center;

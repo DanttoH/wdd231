@@ -24,7 +24,7 @@ function generateCourseList(category = "ALL") {
 
     filteredCourses.forEach(course => {
         const button = document.createElement("button");
-        button.textContent = `${course.id} (${course.credits} créditos)`;
+        button.textContent = `${course.id} (${course.credits} credits)`;
         button.classList.add(course.category === "WDD" ? "coursebutton1" : "coursebutton2");
 
         // Marcar cursos completados
@@ -46,7 +46,7 @@ function generateCourseList(category = "ALL") {
 // Función para calcular el total de créditos de los cursos filtrados
 function calculateTotalCredits(filteredCourses) {
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    document.getElementById("totalCredits").textContent = `Total Créditos: ${totalCredits}`;
+    document.getElementById("totalCredits").textContent = `Total Credits: ${totalCredits}`;
 }
 
 // Eventos de botones para filtrar cursos y actualizar créditos

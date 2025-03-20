@@ -25,10 +25,23 @@ body {
     /* Example */
 }
 
+#hero {
+    margin-top: 80px;
+    /* Ajusta según necesites */
+}
+
+.grid {
+    margin-top: 40px;
+    /* Espacio entre el nav y el grid */
+    margin-bottom: 40px;
+    /* Espacio inferior */
+}
+
 /* Hero Section */
 #hero {
     position: relative;
     /* For positioning the call-to-action */
+    margin-top: 200px;
 }
 
 #hero img {
@@ -238,7 +251,7 @@ section {
     /* Controla el ancho máximo */
     margin: auto;
     /* Centra el grid */
-    padding: 20px;
+
 }
 
 .grid section {
@@ -603,6 +616,7 @@ nav a:hover {
     #menu {
         display: none;
     }
+
 
 }
 

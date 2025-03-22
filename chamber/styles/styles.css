@@ -136,7 +136,8 @@ nav a {
     /* Centra contenido horizontalmente */
     text-align: center;
     /* Centra el texto dentro */
-    width: 100%
+    width: 100%;
+    padding-top: 100px;
 }
 
 .hero img {

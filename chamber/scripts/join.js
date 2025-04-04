@@ -29,28 +29,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function openModal(modalId, event) {
-    if (event) event.preventDefault(); // Evita el comportamiento por defecto
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.style.display = "block";
-    }
-}
-
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Cierra el modal si el usuario hace clic fuera de él
-window.onclick = function(event) {
-    const modals = document.querySelectorAll(".modal");
-    modals.forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-};
 

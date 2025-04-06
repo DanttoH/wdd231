@@ -21,6 +21,10 @@ header {
     justify-content: center;
 }
 
+.responsive-img {
+    width: 80%;
+}
+
 .profile {
     max-width: 80px;
     border-radius: 50%;

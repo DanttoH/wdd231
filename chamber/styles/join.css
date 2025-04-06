@@ -302,3 +302,119 @@ footer {
 
 
 }
+
+/* small view navigation */
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border: 0;
+    background: #f0f0f0;
+    color: #000;
+
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.nav {
+    background-color: #14213D;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+    background-color: #0F2D49;
+    color: #FFFFFF;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: .075rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    background-color: #0F2D49
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: #CCBF90;
+    color: #dfdfdf;
+    font-weight: 700;
+}
+
+.show li {
+    display: block;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "📍";
+    /* just a wayfinding symbol for the user */
+}
+
+@media (min-width: 40em) {
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    .navigation a {
+        display: block;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+
+}
+
+/* Mobile Styles */
+body {
+    font-size: 16px;
+}
+
+#hero img {
+    width: 100%;
+}
+
+/* Larger Screen Styles */
+@media (min-width: 768px) {
+    #hero img {
+        width: 50%;
+    }
+}

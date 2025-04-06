@@ -115,28 +115,24 @@
 
 
             <!-- Membership Cards -->
-            <div class="membership-cards">
-                <div class="membership-card" id="np-card">
-                    <h3>NP Membership</h3>
-                    <p>No Fee</p>
-                    <button onclick="openModal('np-modal')">Learn More</button>
-                </div>
-                <div class="membership-card" id="bronze-card">
-                    <h3>Bronze Membership</h3>
-                    <p>Affordable Price</p>
-                    <button onclick="openModal('bronze-modal')">Learn More</button>
-                </div>
-                <div class="membership-card" id="silver-card">
-                    <h3>Silver Membership</h3>
-                    <p>Great Benefits</p>
-                    <button onclick="openModal('silver-modal')">Learn More</button>
-                </div>
-                <div class="membership-card" id="gold-card">
-                    <h3>Gold Membership</h3>
-                    <p>Premium Features</p>
-                    <button onclick="openModal('gold-modal')">Learn More</button>
-                </div>
+            <!-- Radios -->
+            <label><input type="radio" name="membership" value="gold"> Oro</label>
+            <label><input type="radio" name="membership" value="silver"> Plata</label>
+            <label><input type="radio" name="membership" value="bronze"> Bronce</label>
+
+            <!-- Botón para mostrar beneficios -->
+            <button type="button" onclick="mostrarBeneficios()">Ver Beneficios</button>
+
+            <!-- Modal de Beneficios -->
+            <div id="beneficiosModal" style="display:none;">
+                <div id="beneficiosTexto"></div>
+                <button onclick="document.getElementById('beneficiosModal').style.display='none'">Cerrar</button>
             </div>
+            <button id="verBeneficiosBtn" class="benefits-button">
+                <i class="fas fa-gift"></i> Ver Beneficios
+            </button>
+
+
 
             <!-- Modals for Membership Details -->
             <div id="np-modal" class="modal">

@@ -1,358 +1,206 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --light: #ecf0f1;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background: var(--light);
+    margin: 0;
+    padding: 0;
+    color: var(--primary);
 }
 
-header,
-footer {
-    background-color: #333;
+header {
+    background: #CCBF90;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    max-width: 80px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--primary);
+}
+
+nav a {
     color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-}
-
-/* Form Styling */
-form {
-    background-color: #798A99;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    color: #FFF;
-}
-
-.form-field {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
+    text-decoration: none;
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="submit"],
+main {
+    padding: 2rem;
+}
+
+.form-section {
+    max-width: 800px;
+    margin: auto;
+    background: #798A99;
+    padding: 2rem;
+    box-shadow: 0 0 10px var(--shadow);
+    border-radius: 12px;
+}
+
+.registration-form,
+h2,
+h1 {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: white;
+}
+
+input,
 select,
 textarea {
-    width: 100%;
-    padding: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-input[type="submit"] {
-    background-color: #14213D;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Membership Cards Styling */
-.membership-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.membership-card {
-    background-color: #CCBF90;
     border-radius: 8px;
-    padding: 20px;
-    width: 22%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, opacity 0.5s ease;
-    opacity: 0;
-    transform: translateY(20px);
 }
 
-.membership-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.membership-card button {
-    background-color: #0F2D49;
+input[type=\"submit\"] {
+    background: var(--accent);
     color: white;
-    border: none;
-    padding: 10px 20px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: none;
+    transition: background 0.3s;
 }
 
-.membership-card button:hover {
-    background-color: #0056b3;
+input[type=\"submit\"]:hover {
+    background: #2980b9;
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background: #2980b9;
 }
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 2rem;
-    border-radius: 1rem;
+    background: white;
+    margin: 10% auto;
+    padding: 1rem;
+    border: 1px solid #888;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-    animation: slideDown 0.3s ease;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    border-radius: 12px;
 }
 
 .close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    color: #888;
-    font-size: 1.5rem;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     cursor: pointer;
-    transition: color 0.2s ease;
 }
 
 .close:hover {
-    color: #000;
+    color: black;
 }
 
-
-.benefits-button {
-    background: linear-gradient(135deg, #007BFF, #0056b3);
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary);
     color: white;
-    padding: 0.8rem 1.6rem;
-    border: none;
-    border-radius: 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.benefits-button:hover {
-    background: linear-gradient(135deg, #0056b3, #003f7f);
-    transform: translateY(-2px);
+.thankyou-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-.benefits-button i {
-    font-size: 1.2rem;
+.thankyou-container h1 {
+    font-size: 2rem;
+    color: #2c3e50;
 }
 
-
-/* Botón cerrar en la esquina */
-#beneficiosModal .cerrar-modal {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #333;
-    cursor: pointer;
-    transition: color 0.2s ease;
+.thankyou-container p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
 }
 
-#beneficiosModal .cerrar-modal:hover {
-    color: #cc0000;
-}
-
-/* Animación */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: translateY(30px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Animation for Membership Cards */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
         transform: translateY(0);
-    }
-}
-
-.membership-card.animate {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-/* Responsive Design for Small Screens (Mobile) */
-@media screen and (max-width: 768px) {
-    .membership-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .membership-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .membership-card h3 {
-        font-size: 1.2em;
-    }
-
-    .membership-card button {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
-
-    /* Adjust the form padding */
-    form {
-        padding: 15px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea,
-    input[type="submit"] {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    /* Adjust the header/footer text size */
-    header,
-    footer {
-        font-size: 14px;
-    }
-}
-
-/* Responsive Design for Larger Screens (Desktop) */
-@media screen and (min-width: 1024px) {
-    .membership-cards {
-        justify-content: space-around;
-    }
-
-    .membership-card {
-        width: 22%;
-        margin-bottom: 30px;
-    }
-
-    .membership-card h3 {
-        font-size: 1.8em;
-    }
-
-    .membership-card button {
-        padding: 14px 30px;
-        font-size: 16px;
-    }
-
-    /* Increase form padding */
-    form {
-        padding: 25px;
-    }
-
-    label {
-        font-size: 16px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea,
-    input[type="submit"] {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    /* Adjust the header/footer text size */
-    header,
-    footer {
-        font-size: 18px;
-    }
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: block;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
     }
 }
 
@@ -407,8 +255,7 @@ nav ul li a {
     color: white;
     font-weight: 700;
     transition: 0.5s;
-    background-color: #0F2D49;
-    border-radius: 10px;
+    background-color: #0F2D49
 }
 
 .navigation a:hover,
@@ -453,121 +300,5 @@ nav ul li a {
         display: none;
     }
 
-}
 
-/* Mobile Styles */
-body {
-    font-size: 16px;
-}
-
-#hero img {
-    width: 100%;
-}
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
-footer {
-    background-color: #14213D;
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-header {
-    background: #CCBF90;
-    color: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.profile {
-    height: 150px;
-    width: 150px;
-    border-radius: 20%;
-    object-fit: cover;
-    background-color: #dfdfdf;
-    margin-left: 10px;
-
-}
-
-.thank-you-content h1 {
-    font-size: 2em;
-    color: #333;
-}
-
-.thank-you-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.thank-you-content ul {
-    list-style-type: none;
-    font-size: 1.1em;
-}
-
-.thank-you-content li {
-    margin: 10px 0;
-}
-
-.thank-you-content strong {
-    color: #007bff;
-}
-
-/* Text Fade-in Animation */
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Fade In Animation for Main Content */
-@keyframes fadeInMain {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Animation for Membership Cards */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

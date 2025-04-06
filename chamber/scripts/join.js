@@ -1,23 +1,27 @@
-const modal = document.getElementById("beneficiosModal");
-const btn = document.getElementById("verBeneficiosBtn");
-const span = document.getElementsByClassName("close")[0];
-
-btn.addEventListener("click", () => {
-    modal.style.display = "block";
+// Hamburger menu toggle
+document.getElementById('menu').addEventListener('click', () => {
+    document.querySelector('.navigation').classList.toggle('open');
 });
 
-span.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+// Timestamp
+document.getElementById('timestamp').value = new Date().toISOString();
 
-window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
+// Modal handling
+function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+// Close modal with ESC
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
     }
 });
 
-window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        modal.style.display = "none";
-    }
-});
+// Footer dates
+document.getElementById('theyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;

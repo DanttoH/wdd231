@@ -1,0 +1,54 @@
+/* site-plan.css */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #194759;
+}
+
+header {
+    background-color: #194759;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+footer {
+    background-color: #194759;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.figure img {
+    width: auto;
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #194759;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+}

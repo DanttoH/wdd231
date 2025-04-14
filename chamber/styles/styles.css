@@ -661,3 +661,239 @@ body {
     transform: translateY(20px);
     animation: fadeIn 1s ease-out forwards;
 }
+
+.wraper {
+    padding: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        "spa bus"
+        "vineyards reserve"
+        "climbing museum"
+        "rafting rafting";
+}
+
+/* Asignación de áreas */
+.spa {
+    grid-area: spa;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.bus {
+    grid-area: bus;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.vineyards {
+    grid-area: vineyards;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.reserve {
+    grid-area: reserve;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.climbing {
+    grid-area: climbing;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.museum {
+    grid-area: museum;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.rafting {
+    grid-area: rafting;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Diseño responsive para móviles */
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "spa"
+            "bus"
+            "vineyards"
+            "reserve"
+            "climbing"
+            "museum"
+            "rafting";
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        "spa bus"
+        "vineyards reserve"
+        "climbing museum"
+        "rafting rafting";
+}
+
+.spa,
+.bus,
+.vineyards,
+.reserve,
+.climbing,
+.museum,
+.rafting {
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* grid-area assignment */
+.spa {
+    grid-area: spa;
+}
+
+.bus {
+    grid-area: bus;
+}
+
+.vineyards {
+    grid-area: vineyards;
+}
+
+.reserve {
+    grid-area: reserve;
+}
+
+.climbing {
+    grid-area: climbing;
+}
+
+.museum {
+    grid-area: museum;
+}
+
+.rafting {
+    grid-area: rafting;
+}
+
+.theater {
+    grid-area: theater;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "spa"
+            "bus"
+            "vineyards"
+            "reserve"
+            "climbing"
+            "museum"
+            "rafting"
+            "theater";
+    }
+}
+
+.sidebar-toast {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #f0f9ff;
+    color: #333;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #0077b6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 0.9rem;
+    max-width: 280px;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        filter: brightness(1.1);
+    }
+}
+
+.member-card {
+    background-color: #09b758;
+    color: #333;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.member-card h3 {
+    color: #005eaa;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.member-card p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.member-card a {
+    margin-top: auto;
+    color: #005eaa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}

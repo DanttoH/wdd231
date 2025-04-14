@@ -41,17 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-        fetch('members.json')
-    .then(response => response.json())
-    .then(data => {
-        const spotlights = data.filter(member => member.membership === 'gold' || member.membership === 'silver');
-        const randomSpotlights = spotlights.sort(() => 0.5 - Math.random()).slice(0, 3);
+    fetch('members.json')
+        .then(response => response.json())
+        .then(data => {
+            const spotlights = data.filter(member => member.membership === 'gold' || member.membership === 'silver');
+            const randomSpotlights = spotlights.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-        const spotlightSection = document.getElementById('spotlights');
-        randomSpotlights.forEach(member => {
-            const memberDiv = document.createElement('div');
-            memberDiv.classList.add('spotlight');
-            memberDiv.innerHTML = `
+            const spotlightSection = document.getElementById('spotlights');
+            randomSpotlights.forEach(member => {
+                const memberDiv = document.createElement('div');
+                memberDiv.classList.add('spotlight');
+                memberDiv.innerHTML = `
                 <h3>${member.companyName}</h3>
                 <img src="${member.logo}" alt="${member.companyName}">
                 <p>Phone: ${member.phone}</p>
@@ -59,11 +59,54 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="${member.website}" target="_blank">Visit Website</a>
                 <p>Membership: ${member.membership}</p>
             `;
-            spotlightSection.appendChild(memberDiv);
-        });
-    })
-    .catch(error => console.error('Error loading member data:', error));
+                spotlightSection.appendChild(memberDiv);
+            });
+        })
+        .catch(error => console.error('Error loading member data:', error));
 
 
 });
 
+function getGridAreaClass(name) {
+    name = name.toLowerCase();
+    if (name.includes("thermal") || name.includes("spa")) {
+        return "spa";
+    } else if (name.includes("bus")) {
+        return "bus";
+    } else if (name.includes("vineyard") || name.includes("trivento")) {
+        return "vineyards";
+    } else if (name.includes("reserve") || name.includes("villavicencio")) {
+        return "reserve";
+    } else if (name.includes("climbing") || name.includes("aconcagua")) {
+        return "climbing";
+    } else if (name.includes("museum") || name.includes("museo")) {
+        return "museum";
+    } else if (name.includes("rafting")) {
+        return "rafting";
+    } else if (name.includes("theater")) {
+        return "theater";
+    } else {
+        return "default"; // fallback
+    }
+}
+const gridContainer = document.querySelector('.grid');
+
+fetch('data/members.json') // o la ruta correcta a tu JSON
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(business => {
+            const section = document.createElement('section');
+            const areaClass = getGridAreaClass(business.name);
+            section.classList.add(areaClass);
+
+            section.innerHTML = `
+          <h3>${business.name}</h3>
+          <img src="${business.image}" alt="${business.name}">
+          <p><strong>Address:</strong> ${business.address}</p>
+          <p><strong>Phone:</strong> ${business.phone}</p>
+          <p><a href="${business.website}" target="_blank">Visit Website</a></p>
+        `;
+
+            gridContainer.appendChild(section);
+        });
+    });

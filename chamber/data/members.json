@@ -67,5 +67,15 @@
         "image1": "images/rafting1.jpg",
         "membership": 3,
         "description": "Adventure Park. Potrerillos – Luján de Cuyo – Mendoza Ruta Perilago S/N – CP 5549 Lat/Long: -32° 56′ 18.48″, -69° 12′ 27.91″ +54 02624 482037 info@argentinarafting.com"
+    },
+    {
+        "name": "Independence Theater",
+        "address": "Republica de Chile 1754 M5500EOV Mendoza",
+        "phone": "0261 438-0644",
+        "website": "https://www.mendoza.gov.ar/cultura/teatroindependencia/",
+        "image": "images/teatro.webp",
+        "image1": "images/teatrologo.webp",
+        "membership": 3,
+        "description": "The Teatro Independencia is the main performance hall in the province of Mendoza. It originated from a project launched by the provincial government in 1922 to develop a tourist corridor around Plaza Independencia. In 1922, Governor Carlos Washington Lencinas inaugurated the Plaza Hotel and signed a contract for the construction of the first opera-dedicated theater in the province of Mendoza with Faustino and Mauricio da Rosa, who, at the time, managed the Teatro Colón in Buenos Aires."
     }
 ]

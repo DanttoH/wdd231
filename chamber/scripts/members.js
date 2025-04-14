@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
                 <p>${member.description}</p>
-                <a href="${member.website}" target="_blank">Website</a>
+                <a href="${member.website}" target="_blank">Learn more</a>
                 <p>Membership Level: ${member.membership}</p>
                 
             `;
@@ -104,7 +104,7 @@ fetch('data/members.json') // o la ruta correcta a tu JSON
           <img src="${business.image}" alt="${business.name}">
           <p><strong>Address:</strong> ${business.address}</p>
           <p><strong>Phone:</strong> ${business.phone}</p>
-          <p><a href="${business.website}" target="_blank">Learn More</a></p>
+          <p><a href="${business.website}" target="_blank">Visit Website</a></p>
         `;
 
             gridContainer.appendChild(section);

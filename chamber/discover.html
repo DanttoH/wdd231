@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"
-    content="Explore key places and attractions in Mendoza. Discover business opportunities, cultural highlights, and nature with Scope Mendoza.">
-<meta name="author" content="Dantto Elias Hermosilla Orellana">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore key places and attractions in Mendoza. Discover business opportunities, cultural highlights, and nature with Scope Mendoza.">
+    <meta name="author" content="Dantto Elias Hermosilla Orellana">
 
 
-<meta property="og:title" content="Chamber of Commerce Discover Page">
-<meta property="og:type" content="">
-<meta property="og:image" content="images/teatro.webp">
-<meta property="og:url" content="https://danttoh.github.io/wdd231/chamber/discover.html">
+    <meta property="og:title" content="Chamber of Commerce Discover Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://danttoh.github.io/wdd231/chamber/discover.html">
+    <meta property="og:url" content="https://danttoh.github.io/wdd231/chamber/discover.html">
 
-<link rel="icon" href="images/favicon512.png">
-<link rel="stylesheet" href="styles/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon512.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<title>Discover Page </title>
+    <title>Discover Mendoza</title>
 </head>
 
 <body>
@@ -59,43 +60,43 @@
 
             <p id="lastModified"> &bull; <span id="lastu"></span></p>
         </div>
+    </footer>
 
-        <script src="scripts/scripts.js"></script>
-        <script src="scripts/hamburger.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/hamburger.js"></script>
 
-        <script src="scripts/grid.js"></script>
-        <script src="scripts/members.js"></script>
-        <script>
-            const visitDisplay = document.getElementById("visit-message");
-            const now = Date.now();
-            const lastVisit = localStorage.getItem("lastVisit");
+    <script src="scripts/grid.js"></script>
+    <script src="scripts/members.js"></script>
+    <script>
+        const visitDisplay = document.getElementById("visit-message");
+        const now = Date.now();
+        const lastVisit = localStorage.getItem("lastVisit");
 
-            let message = "";
+        let message = "";
 
-            if (!lastVisit) {
-                message = "Welcome! Let us know if you have any questions.";
+        if (!lastVisit) {
+            message = "Welcome! Let us know if you have any questions.";
+        } else {
+            const difference = now - lastVisit;
+            const daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+            if (daysPassed < 1) {
+                message = "Back so soon! Awesome!";
+            } else if (daysPassed === 1) {
+                message = "You last visited 1 day ago.";
             } else {
-                const difference = now - lastVisit;
-                const daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
-
-                if (daysPassed < 1) {
-                    message = "Back so soon! Awesome!";
-                } else if (daysPassed === 1) {
-                    message = "You last visited 1 day ago.";
-                } else {
-                    message = `You last visited ${daysPassed} days ago.`;
-                }
+                message = `You last visited ${daysPassed} days ago.`;
             }
+        }
 
-            localStorage.setItem("lastVisit", now);
-            visitDisplay.textContent = message;
+        localStorage.setItem("lastVisit", now);
+        visitDisplay.textContent = message;
 
-            // ⏱️ Ocultar el mensaje después de 5 segundos
-            setTimeout(() => {
-                visitDisplay.style.display = "none";
-            }, 5000);
-        </script>
-
+        // ⏱️ Ocultar el mensaje después de 5 segundos
+        setTimeout(() => {
+            visitDisplay.style.display = "none";
+        }, 5000);
+    </script>
 </body>
 
 

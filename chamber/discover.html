@@ -54,7 +54,7 @@
 
 
 
-    <<div class="wraper">
+    <div class="wraper">
         <aside class="sidebar-toast" id="visit-message"></aside>
         <article class="grid">
             <section class="member-card">
@@ -65,8 +65,6 @@
             <section class="member-card">
                 <img src="images/citybus.png" alt="citybus">
 
-
-                </a>
             </section>
             <section class="member-card">
                 <img src="images/trivento1.jpg" alt="Trivento wines">
@@ -96,67 +94,68 @@
             </section>
             <section class="member-card">
                 <img src="images/teatrologo.webp" alt="theater">
+            </section>
 
 
         </article>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer2">
+            <p>Scope Mendoza Chamber of Commerce</p>
+            <p>B Infanta M26 C9, Las Heras, Mendoza</p>
+            <p>info@scopeM.org</p>
+            <p>(54) 9 2613342583</p>
+
+        </div>
+        <div class="footer1">
+            <p> &copy; <span id="theyear"></span> WDD231 Class Project
+            <p>Dantto Hermosilla</p>
+            <p>Scope Mendoza Chamber of Commerce</p>
+
+            <p id="lastModified"> &bull; <span id="lastu"></span></p>
         </div>
 
 
+    </footer>
 
-        <footer class="footer">
-            <div class="footer2">
-                <p>Scope Mendoza Chamber of Commerce</p>
-                <p>B Infanta M26 C9, Las Heras, Mendoza</p>
-                <p>info@scopeM.org</p>
-                <p>(54) 9 2613342583</p>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/hamburger.js"></script>
 
-            </div>
-            <div class="footer1">
-                <p> &copy; <span id="theyear"></span> WDD231 Class Project
-                <p>Dantto Hermosilla</p>
-                <p>Scope Mendoza Chamber of Commerce</p>
+    <script src="scripts/grid.js"></script>
+    <script src="scripts/members.js"></script>
+    <script>
+        const visitDisplay = document.getElementById("visit-message");
+        const now = Date.now();
+        const lastVisit = localStorage.getItem("lastVisit");
 
-                <p id="lastModified"> &bull; <span id="lastu"></span></p>
-            </div>
+        let message = "";
 
+        if (!lastVisit) {
+            message = "Welcome! Let us know if you have any questions.";
+        } else {
+            const difference = now - lastVisit;
+            const daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-        </footer>
-
-        <script src="scripts/scripts.js"></script>
-        <script src="scripts/hamburger.js"></script>
-
-        <script src="scripts/grid.js"></script>
-        <script src="scripts/members.js"></script>
-        <script>
-            const visitDisplay = document.getElementById("visit-message");
-            const now = Date.now();
-            const lastVisit = localStorage.getItem("lastVisit");
-
-            let message = "";
-
-            if (!lastVisit) {
-                message = "Welcome! Let us know if you have any questions.";
+            if (daysPassed < 1) {
+                message = "Back so soon! Awesome!";
+            } else if (daysPassed === 1) {
+                message = "You last visited 1 day ago.";
             } else {
-                const difference = now - lastVisit;
-                const daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
-
-                if (daysPassed < 1) {
-                    message = "Back so soon! Awesome!";
-                } else if (daysPassed === 1) {
-                    message = "You last visited 1 day ago.";
-                } else {
-                    message = `You last visited ${daysPassed} days ago.`;
-                }
+                message = `You last visited ${daysPassed} days ago.`;
             }
+        }
 
-            localStorage.setItem("lastVisit", now);
-            visitDisplay.textContent = message;
+        localStorage.setItem("lastVisit", now);
+        visitDisplay.textContent = message;
 
-            // ⏱️ Ocultar el mensaje después de 5 segundos
-            setTimeout(() => {
-                visitDisplay.style.display = "none";
-            }, 5000);
-        </script>
+        // ⏱️ Ocultar el mensaje después de 5 segundos
+        setTimeout(() => {
+            visitDisplay.style.display = "none";
+        }, 5000);
+    </script>
 
 </body>
 

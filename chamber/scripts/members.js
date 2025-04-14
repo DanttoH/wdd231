@@ -104,7 +104,7 @@ fetch('data/members.json') // o la ruta correcta a tu JSON
           <img src="${business.image}" alt="${business.name}">
           <p><strong>Address:</strong> ${business.address}</p>
           <p><strong>Phone:</strong> ${business.phone}</p>
-          <p><a href="${business.website}" target="_blank">Visit Website</a></p>
+          <p><a href="${business.website}" target="_blank">Learn More</a></p>
         `;
 
             gridContainer.appendChild(section);

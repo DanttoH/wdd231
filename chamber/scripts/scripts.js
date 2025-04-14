@@ -28,5 +28,37 @@ if (input) {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const visitDisplay = document.getElementById("visit-message");
+    const now = Date.now();
+    const lastVisit = localStorage.getItem("lastVisit");
+
+    let message = "";
+
+    if (!lastVisit) {
+        message = "👋 Welcome! Let us know if you have any questions.";
+    } else {
+        const difference = now - lastVisit;
+        const daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+        if (daysPassed < 1) {
+            message = "👋 Back so soon! Awesome!";
+        } else if (daysPassed === 1) {
+            message = "⏳ You last visited 1 day ago.";
+        } else {
+            message = `⏳ You last visited ${daysPassed} days ago.`;
+        }
+    }
+
+    visitDisplay.textContent = message;
+    localStorage.setItem("lastVisit", now);
+
+    // Oculta el mensaje luego de 5 segundos
+    setTimeout(() => {
+        visitDisplay.style.display = "none";
+    }, 5000);
+});
+
+
 
 

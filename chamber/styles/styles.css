@@ -731,11 +731,13 @@ body {
     background-color: #f0f8ff;
     color: #333;
     padding: 1rem;
+    margin: 1rem auto;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 1rem 0;
+    border-radius: 10px;
+    max-width: 600px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Diseño responsive para móviles */
@@ -919,9 +921,11 @@ body {
     background-color: #f0f8ff;
     color: #333;
     padding: 1rem;
+    margin: 1rem auto;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 1rem 0;
+    border-radius: 10px;
+    max-width: 600px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }

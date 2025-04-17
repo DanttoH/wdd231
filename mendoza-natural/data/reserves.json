@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Hiking in Aconcagua",
+        "description": "Explore the majestic Aconcagua mountain.",
+        "price": "$100"
+    },
+    {
+        "name": "Wine Tasting in Uco Valley",
+        "description": "Taste world-class wines in the heart of Mendoza.",
+        "price": "$150"
+    },
+    {
+        "name": "Mountain Biking",
+        "description": "Ride through scenic mountain trails.",
+        "price": "$80"
+    }
+]

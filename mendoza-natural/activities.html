@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Explore eco-tourism activities in Mendoza, Argentina. Hiking, kayaking, bird watching and more." />
+    <meta property="og:title" content="Activities - Discover Natural Mendoza" />
+    <meta property="og:description"
+        content="Discover nature-focused adventures like hiking, kayaking, and more in Mendoza." />
+    <meta property="og:image" content="images/preview.jpg" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/discover-mendoza.css" />
+    <title>Activities | Discover Natural Mendoza</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Discover Natural Mendoza</div>
+
+    </header>
+    <button id="menu" aria-label="Open navigation menu"></button>
+    <nav class="navigation">
+
+        <ul id="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <section class="activities-intro">
+            <h1>Eco-Tourism Activities</h1>
+            <p>Choose your adventure! From peaceful walks to adrenaline-fueled river rafting, Mendoza has it all.</p>
+        </section>
+
+        <section id="activities-container"></section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Discover Natural Mendoza | <a href="attributions.html">Attributions</a></p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script type="module" src="scripts/activities.js"></script>
+</body>
+
+</html>

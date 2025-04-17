@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover natural eco-tourism in Mendoza, Argentina. Explore breathtaking reserves and activities." />
+    <meta property="og:title" content="Discover Natural Mendoza" />
+    <meta property="og:description"
+        content="Explore the natural beauty of Mendoza through eco-reserves and outdoor activities." />
+    <meta property="og:image" content="images/preview.jpg" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/discover-mendoza.css" />
+    <title>Discover Natural Mendoza</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Discover Natural Mendoza</div>
+
+    </header>
+    <button id="menu" aria-label="Open navigation menu"></button>
+    <nav class="navigation">
+        <ul id="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero.webp" type="image/webp" loading="lazy">
+
+            </picture>
+            <div class="hero-text">
+                <h1>Reconnect with Nature in Mendoza</h1>
+                <p>Discover pristine reserves, eco-tours, and outdoor experiences like never before.</p>
+                <a href="activities.html" class="cta-button">Explore Activities</a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>Why Choose Natural Mendoza?</h2>
+            <p>Mendoza offers a unique combination of natural beauty, adventure, and tranquility. Whether you're a
+                nature lover, a hiker, or simply looking to unwind, there's something here for everyone.</p>
+        </section>
+
+        <section class="highlights">
+            <h2>Top Attractions</h2>
+            <div class="highlight-grid">
+                <article>
+                    <img src="images/andes.webp" alt="Andes mountains" loading="lazy">
+                    <h3>The Andes</h3>
+                    <p>Experience breathtaking views and hiking trails in the Andes mountain range.</p>
+                </article>
+                <article>
+                    <img src="images/villavicencio.webp" alt="Nature park" loading="lazy">
+                    <h3>Provincial Reserves</h3>
+                    <p>Visit protected areas rich with flora, fauna, and ecological importance.</p>
+                </article>
+                <article>
+                    <img src="images/rafting.webp" alt="River adventure" loading="lazy">
+                    <h3>Eco Adventures</h3>
+                    <p>Kayak, bike, or zip-line your way through Mendoza's natural wonders.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Discover Natural Mendoza | <a href="attributions.html">Attributions</a></p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+
+
+</body>
+
+</html>

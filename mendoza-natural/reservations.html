@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Make your reservation for eco-tourism adventures in Mendoza." />
+    <meta property="og:title" content="Reservations - Discover Natural Mendoza" />
+    <meta property="og:description" content="Reserve your spot to experience the best of Mendoza's natural beauty." />
+    <meta property="og:image" content="images/preview.jpg" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/discover-mendoza.css" />
+    <title>Reservations | Discover Natural Mendoza</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Discover Natural Mendoza</div>
+
+    </header>
+    <button id="menu" aria-label="Open navigation menu"></button>
+    <nav class="navigation">
+
+        <ul id="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="reservation-form">
+            <h1>Reserve Your Adventure</h1>
+            <form action="thankyou.html" method="get">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="activity">Select Activity:</label>
+                <select id="activity" name="activity" required>
+                    <option value="">Choose an activity</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="kayaking">Kayaking</option>
+                    <option value="bird-watching">Bird Watching</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required />
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Discover Natural Mendoza | <a href="attributions.html">Attributions</a></p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script type="module" src="scripts/reservations.js"></script>
+</body>
+
+</html>

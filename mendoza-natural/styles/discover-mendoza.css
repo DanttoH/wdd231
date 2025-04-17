@@ -94,7 +94,7 @@ nav ul li a:hover {
 
 /* Hero section */
 .hero {
-    background-image: url("/mendoza-natural/images/independence.webp");
+    background-image: url("/images/independence.webp");
     /* Replace with your image path */
     background-size: cover;
     background-position: center;
